@@ -1,0 +1,66 @@
+.wrapper {
+  max-width: $wrapper;
+  margin: 0 auto;
+}
+
+.container {
+  max-width: $container + 30px;
+  margin: 0 auto;
+  padding: 0 1.5rem;
+}
+
+.block-box {
+  max-width: 96rem;
+  margin-left: auto;
+  margin-right: auto;
+
+  text-align: center;
+  &__caption {
+    margin-bottom: 2rem;
+
+    font-size: 2.4rem;
+    font-family: $third-font;
+  }
+  &__heading {
+    position: relative;
+
+    margin-bottom: 3.5rem;
+    padding-bottom: 3.5rem;
+
+    font-size: 3rem;
+    font-weight: bold;
+    text-transform: uppercase;
+
+    &::after {
+      content: "";
+      @include size(6.5rem, 5px);
+      @include absolute-center(x,bottom);
+      background-color: $primary-color;
+    }
+  }
+  &__desc {
+    margin-bottom: 10rem;
+
+    color: $text-color;
+
+    font-size: 1.5rem;
+    font-family: $secondary-font;
+    font-weight: 300;
+    line-height: 1.4;
+  }
+  @include max-width(767px){
+    &__caption{
+      font-size: 2rem;
+    }
+    &__heading{
+      margin-bottom: 2.5rem;
+      padding-bottom: 2.5rem;
+
+      font-size: 2.5rem;
+    }
+    &__desc{
+      margin-bottom: 4rem;
+      font-size: 1.4rem;
+    }
+  }
+}

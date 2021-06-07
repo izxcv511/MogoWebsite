@@ -1,0 +1,25 @@
+//- header -> header-top ->  header-content ->  header-bottom -> responsive -> menu JavaScript -> slider
+header.header
+    .container 
+        .header__top 
+            a.header__logo(href='index.html') MoGo
+            i.fas.fa-bars.header__toggle
+            ul.header-menu
+                +menu-item("About").header-menu__link
+                +menu-item("Service").header-menu__link
+                +menu-item("Work").header-menu__link
+                +menu-item("Blog").header-menu__link
+                +menu-item().header-menu__icon
+                    i.fas.fa-shopping-cart
+                +menu-item().header-menu__icon
+                    i.fas.fa-search
+        .header__content 
+            h2.header__caption Creative template 
+            h1.header__main Welcome to MoGo 
+            a.header__more(href="#") Learn more
+        .header-bottom 
+            +header-bottom-item("01","Intro").is-active
+            +header-bottom-item("02","Work")
+            +header-bottom-item("03","About")
+            +header-bottom-item("04","Contacts")
+            

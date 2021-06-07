@@ -1,0 +1,241 @@
+.header {
+  min-height: 100rem;
+  background: $gradient,
+    url(../images/img-header-bg.jpg) no-repeat center / cover;
+  color: white;
+  &__top {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+
+    padding-top: 3rem;
+  }
+  &__logo {
+    color: white;
+
+    font-size: 3rem;
+    font-weight: bold;
+  }
+  &__toggle {
+    display: none;
+  }
+  &-menu {
+    display: flex;
+
+    &__item {
+      color: white;
+
+      &:hover {
+        border-color: $secondary-color;
+
+        color: $secondary-color;
+      }
+    }
+
+    &__link {
+      display: inline-block;
+
+      color: inherit;
+
+      transition: all 0.25s ease;
+    }
+    &__icon {
+      color: inherit;
+    }
+  }
+
+  &__content {
+    max-width: 80rem;
+    margin: 0 auto;
+    padding-top: 17rem;
+
+    text-align: center;
+  }
+  &__caption {
+    margin-bottom: 3rem;
+
+    font-family: $third-font;
+    font-size: 7.2rem;
+  }
+  &__main {
+    position: relative;
+    margin-bottom: 5rem;
+    padding-bottom: 5rem;
+
+    font-size: 15rem;
+    font-weight: bold;
+    text-transform: uppercase;
+
+    &::after {
+      content: "";
+      @include size(6rem, 0.5rem);
+      @include absolute-center(x, bottom);
+
+      background-color: white;
+    }
+  }
+  &__more {
+    display: inline-block;
+
+    padding: 1rem 3rem;
+
+    border: 0.4rem solid white;
+    color: white;
+
+    font-weight: bold;
+    text-transform: uppercase;
+  }
+  &-bottom {
+    display: flex;
+
+    margin-top: 15.5rem;
+    margin-left: -3rem;
+    padding-bottom: 2.5rem;
+    &__item {
+      position: relative;
+
+      width: calc(25% - 3rem);
+      margin-left: 3rem;
+      padding-top: 2.5rem;
+
+      border-top: 0.5rem solid white;
+
+      cursor: pointer;
+      opacity: 0.6;
+
+      transition: all 0.2s ease;
+      &::before {
+        content: "";
+        @include size(7rem, 0.5rem);
+        position: absolute;
+
+        top: 0;
+        left: 0;
+
+        background-color: $primary-color;
+
+        opacity: 0;
+
+        transform: translateY(-100%);
+        transition: all 0.2s ease;
+      }
+      &:hover,
+      &.is-active {
+        opacity: 1;
+
+        &::before {
+          opacity: 1;
+        }
+      }
+    }
+    &__number {
+      font-size: 2.4rem;
+      font-weight: bold;
+    }
+    &__text {
+      margin-left: 1rem;
+
+      text-transform: uppercase;
+      font-size: 1.8rem;
+    }
+  }
+  @include min-width(768px) {
+    &-menu {
+      &__item {
+        display: inline-block;
+
+        padding: 1rem 0;
+
+        border-bottom: 0.4rem solid transparent;
+
+        &:not(:first-child) {
+          margin-left: 5rem;
+        }
+      }
+    }
+  }
+  @include max-width(1023px) {
+    min-height: unset;
+    &__content {
+      padding-top: 10rem;
+    }
+    &__main {
+      font-size: 10rem;
+    }
+    &-bottom {
+      margin-top: 10.5rem;
+    }
+  }
+  @include max-width(767px) {
+    &__toggle {
+      display: inline-block;
+      align-self: center;
+
+      font-size: 1.8rem;
+    }
+    &-menu {
+      position: fixed;
+      flex-direction: column;
+
+      top: 0;
+      bottom: 0;
+      right: 0;
+
+      width: 60%;
+      min-width: 30rem;
+      padding: 2rem 2.5rem;
+
+      background-color: white;
+
+      z-index: 2;
+
+      transform: translateX(100%);
+      transition: all 0.25s ease;
+      &__item {
+        padding: 1rem;
+        margin-bottom: 1.5rem;
+
+        border-radius: 0.5rem;
+
+        color: $title-color;
+
+        &:hover {
+          background-color: $secondary-color;
+
+          color: white;
+        }
+      }
+    }
+
+    &-bottom__text {
+      display: none;
+    }
+    &__content {
+      padding-top: 5rem;
+    }
+    &__caption {
+      font-size: 3rem;
+    }
+    &__main {
+      margin-bottom: 3rem;
+      padding-bottom: 3rem;
+
+      font-size: 5rem;
+    }
+    &-bottom {
+      margin-top: 5rem;
+      &__item {
+        padding-top: 1.5rem;
+
+        text-align: center;
+
+        &::before {
+          width: 35%;
+        }
+      }
+    }
+  }
+}
+.header-menu.is-expand {
+  transform: translateX(0);
+}

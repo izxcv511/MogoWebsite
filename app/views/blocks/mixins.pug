@@ -1,0 +1,23 @@
+mixin menu-item(title,href="#")
+	li.header-menu__item
+		a(class=attributes.class href= href)= title
+			block
+
+mixin header-bottom-item(number,title)
+	.header-bottom__item(class=attributes.class)
+		span.header-bottom__number=number
+		span.header-bottom__text=title
+
+mixin block-box(caption, title, desc)
+	.block-box
+		h3.block-box__caption= caption
+		h2.block-box__heading= title 
+		if desc 
+			p.block-box__desc= desc	
+
+mixin about-item(image="",icon="",title="", alt="")
+	.about-item 
+		img.about-item__image(src= image, alt=alt)
+		.about-item__content 
+			i.about-item__icon(class=icon)
+			span.about-item__title= title
