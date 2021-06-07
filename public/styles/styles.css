@@ -337,18 +337,23 @@ img {
       font-size: 2rem;
       margin-bottom: 1rem; }
     .about-item__title {
-      display: -webkit-box;
-      -webkit-box-orient: vertical;
-      -webkit-line-clamp: 2;
       width: 100%;
       max-width: 100%;
       text-overflow: ellipsis;
       word-break: break-word;
-      white-space: pre-wrap;
       overflow: hidden;
       font-size: 1.8rem;
       font-weight: bold;
       line-height: 1.4; }
+      @supports (display: -webkit-box) {
+        .about-item__title {
+          display: -webkit-box;
+          -webkit-box-orient: vertical;
+          -webkit-line-clamp: 2;
+          white-space: pre-wrap; } }
+      @supports not (display: -webkit-box) {
+        .about-item__title {
+          white-space: nowrap; } }
   @media screen and (max-width: 767px) {
     .about {
       padding-top: 5rem;
