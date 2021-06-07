@@ -63,11 +63,11 @@
 }
 
 @mixin text-clamp($rows: 1, $width: 100%) {
-  @supports (display: -webkit-box) {
+  @supports (display: -webkit-box) and(-webkit-box-orient: vertical) and(-webkit-line-clamp: $rows) {
     display: -webkit-box;
     -webkit-box-orient: vertical;
     -webkit-line-clamp: $rows;
-    
+
     white-space: pre-wrap;
   }
   @supports not (display: -webkit-box) {

@@ -345,7 +345,7 @@ img {
       font-size: 1.8rem;
       font-weight: bold;
       line-height: 1.4; }
-      @supports (display: -webkit-box) {
+      @supports (display: -webkit-box) and (-webkit-box-orient: vertical) and (-webkit-line-clamp: 2) {
         .about-item__title {
           display: -webkit-box;
           -webkit-box-orient: vertical;
