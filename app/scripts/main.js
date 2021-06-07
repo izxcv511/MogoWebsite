@@ -8,7 +8,8 @@ headerToggle.addEventListener("click", function () {
 });
 
 window.addEventListener("click", function (e) {
-  if (!headerMenu.contains(e.target) && !e.target.matches(".header__toggle")) {
+  console.log(e.target);
+  if (e.target.matches(".shadow")) {
     headerMenu.classList.remove(expandClass);
   }
 });

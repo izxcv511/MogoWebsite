@@ -107,6 +107,16 @@ img {
       transition: all 0.25s ease; }
     .header-menu__icon {
       color: inherit; }
+    .header-menu ~ .shadow {
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background-color: rgba(0, 0, 0, 0.623);
+      opacity: 0;
+      visibility: hidden;
+      z-index: 1; }
   .header__content {
     max-width: 80rem;
     margin: 0 auto;
@@ -203,7 +213,8 @@ img {
       -ms-flex-item-align: center;
       -ms-grid-row-align: center;
       align-self: center;
-      font-size: 1.8rem; }
+      font-size: 1.8rem;
+      cursor: pointer; }
     .header-menu {
       position: fixed;
       -webkit-box-orient: vertical;
@@ -214,7 +225,6 @@ img {
       bottom: 0;
       right: 0;
       width: 60%;
-      min-width: 30rem;
       padding: 2rem 2.5rem;
       background-color: white;
       z-index: 2;
@@ -229,7 +239,8 @@ img {
         color: #333333; }
         .header-menu__item:hover {
           background-color: #eed889;
-          color: white; }
+          color: white;
+          cursor: pointer; }
     .header-bottom__text {
       display: none; }
     .header__content {
@@ -250,7 +261,11 @@ img {
 
 .header-menu.is-expand {
   -webkit-transform: translateX(0);
-  transform: translateX(0); }
+  transform: translateX(0);
+  z-index: 2; }
+  .header-menu.is-expand ~ .shadow {
+    opacity: 1;
+    visibility: visible; }
 
 .about {
   padding-top: 9.3rem;
@@ -278,6 +293,7 @@ img {
       -webkit-transition: all 0.25s linear;
       transition: all 0.25s linear; }
     .about-item:hover {
+      cursor: pointer;
       -webkit-transform: translate(-1rem, -1rem);
       transform: translate(-1rem, -1rem); }
       .about-item:hover::after {
