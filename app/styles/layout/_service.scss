@@ -1,0 +1,62 @@
+.service {
+  padding: 11rem 0 12rem;
+
+  background-color: white;
+
+  &__list {
+    @include flex-box(stretch, space-between);
+    margin-top: 6.5rem;
+    &:last-child {
+      margin-top: 5rem;
+      padding-top: 5rem;
+
+      border-top: 1px solid $gray-dark-color;
+    }
+  }
+  &-item {
+    @include flex-box(stretch);
+    width: calc(33.33% - 2.7rem);
+
+    &__icon {
+      padding: 0 3rem;
+
+      color: $third-color;
+
+      font-size: 3.5rem;
+    }
+    &__info {
+      width: calc(100% - 9.5rem);
+    }
+    &__title {
+      @include text-clamp();
+      margin-bottom: 1em;
+
+      color: $title-color;
+
+      font-weight: 500;
+      text-transform: uppercase;
+    }
+    &__desc {
+      color: $text-color;
+
+      line-height: 1.6;
+      font-weight: 300;
+      font-family: $secondary-font;
+    }
+  }
+  @include max-width(1023px) {
+    padding: 5rem 0;
+    &__list {
+      display: block;
+
+      &:last-child {
+        margin-top: 1rem;
+        padding-top: 4rem;
+      }
+    }
+    &-item {
+      width: 100%;
+      margin-bottom: 3rem;
+    }
+  }
+}

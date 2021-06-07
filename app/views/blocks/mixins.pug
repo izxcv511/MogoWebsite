@@ -26,3 +26,11 @@ mixin number-item(number="",text="")
 	.number-item
 		h4.number-item__count= number 
 		span.number-item__text= text
+
+mixin service-item(icon="",title="",desc="")
+	.service-item
+		i.service-item__icon(class= icon)
+		.service-item__info 
+			h3.service-item__title= title
+			p.service-item__desc= desc
+

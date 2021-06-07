@@ -1,0 +1,18 @@
+.device {
+  padding-top: 11rem;
+
+  background: linear-gradient(
+      to top,
+      rgba(255, 255, 255, 0.7),
+      rgba(255, 255, 255, 0.7)
+    ),
+    url(../images/img-device-bg.png) no-repeat center/ cover;
+
+  &__image {
+    margin: -5rem auto 0;
+    transform: translateY(calc(13% + 3px));
+  }
+  @include max-width(767px){
+    padding-top: 5rem;
+  }
+}
