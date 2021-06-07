@@ -7,7 +7,7 @@ headerToggle.addEventListener("click", function () {
   headerMenu.classList.add(expandClass);
 });
 
-window.addEventListener("click", function (e) {
+document.querySelector(body).addEventListener("click", function (e) {
   console.log(e.target);
   if (e.target.matches(".shadow")) {
     headerMenu.classList.remove(expandClass);
