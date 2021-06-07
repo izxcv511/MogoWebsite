@@ -43,7 +43,7 @@
       color: inherit;
     }
 
-    & ~ .shadow {
+    & ~ .header__shadow {
       position: fixed;
 
       top: 0;
@@ -257,7 +257,7 @@
 .header-menu.is-expand {
   transform: translateX(0);
   z-index: 2;
-  & ~ .shadow{
+  & ~ .header__shadow{
     opacity: 1;
     visibility: visible;
   }

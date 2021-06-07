@@ -107,7 +107,7 @@ img {
       transition: all 0.25s ease; }
     .header-menu__icon {
       color: inherit; }
-    .header-menu ~ .shadow {
+    .header-menu ~ .header__shadow {
       position: fixed;
       top: 0;
       left: 0;
@@ -263,7 +263,7 @@ img {
   -webkit-transform: translateX(0);
   transform: translateX(0);
   z-index: 2; }
-  .header-menu.is-expand ~ .shadow {
+  .header-menu.is-expand ~ .header__shadow {
     opacity: 1;
     visibility: visible; }
 
