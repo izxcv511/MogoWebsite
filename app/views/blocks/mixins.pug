@@ -21,3 +21,8 @@ mixin about-item(image="",icon="",title="", alt="")
 		.about-item__content 
 			i.about-item__icon(class=icon)
 			span.about-item__title= title
+
+mixin number-item(number="",text="")
+	.number-item
+		h4.number-item__count= number 
+		span.number-item__text= text
