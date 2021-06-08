@@ -3,34 +3,42 @@ mixin menu-item(title,href="#")
 		a(class=attributes.class href= href)= title
 			block
 
-mixin header-bottom-item(number,title)
+mixin header-bottom-item(number ,title)
 	.header-bottom__item(class=attributes.class)
 		span.header-bottom__number=number
 		span.header-bottom__text=title
 
-mixin block-box(caption, title, desc)
+mixin block-box(caption ,title ,desc)
 	.block-box
 		h3.block-box__caption= caption
 		h2.block-box__heading= title 
 		if desc 
 			p.block-box__desc= desc	
 
-mixin about-item(image="",icon="",title="", alt="")
+mixin about-item(image="" ,icon="" ,title="" ,alt="")
 	.about-item 
 		img.about-item__image(src= image, alt=alt)
 		.about-item__content 
 			i.about-item__icon(class=icon)
 			span.about-item__title= title
 
-mixin number-item(number="",text="")
+mixin number-item(number="" ,text="")
 	.number-item
 		h4.number-item__count= number 
 		span.number-item__text= text
 
-mixin service-item(icon="",title="",desc="")
+mixin service-item(icon="" ,title="" ,desc="")
 	.service-item
 		i.service-item__icon(class= icon)
 		.service-item__info 
 			h3.service-item__title= title
 			p.service-item__desc= desc
 
+mixin wedo-item(image="" ,title="" ,content="")
+	.wedo-item(class=attributes.class)
+		.wedo-item__header 
+			img.wedo-item__icon(src= image)
+			h3.wedo-item__title= title 
+			i.fal.fa-angle-up.wedo-item__arrow
+		.wedo-item__content
+			p.wedo-item__text= content

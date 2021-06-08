@@ -501,3 +501,89 @@ img {
 
 .wedo {
   padding: 10rem 0; }
+  .wedo__image {
+    -o-object-fit: cover;
+    object-fit: cover; }
+  .wedo__list {
+    margin-top: 2rem; }
+  .wedo-item:not(:last-child) {
+    margin-bottom: 1rem; }
+  .wedo-item.is-active .wedo-item__content {
+    display: block; }
+  .wedo-item__header {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: row;
+    flex-direction: row;
+    -ms-flex-wrap: nowrap;
+    flex-wrap: nowrap;
+    padding: 1.5rem;
+    border: 1px solid #f8f8f8;
+    cursor: pointer; }
+  .wedo-item__icon {
+    margin-right: 1.5rem;
+    -o-object-fit: cover;
+    object-fit: cover; }
+  .wedo-item__title {
+    margin-right: 2rem;
+    text-transform: uppercase;
+    font-weight: 500;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis; }
+  .wedo-item__arrow {
+    margin-left: auto;
+    color: #cccccc;
+    font-size: 3rem; }
+  .wedo-item__content {
+    display: none;
+    padding: 2rem;
+    border: 1px solid #f8f8f8;
+    border-top-width: 0;
+    font-size: 1.5rem;
+    font-family: "Roboto", sans-serif;
+    line-height: 1.6;
+    font-style: italic;
+    color: #999999;
+    font-weight: 300; }
+  .wedo-item__text {
+    padding-right: 2rem;
+    height: 14rem;
+    overflow-y: scroll; }
+    .wedo-item__text::-webkit-scrollbar {
+      width: 0.6rem; }
+    .wedo-item__text::-webkit-scrollbar-track {
+      border-radius: 2rem;
+      background-color: #f5f5f5; }
+    .wedo-item__text::-webkit-scrollbar-thumb {
+      border-radius: 2rem;
+      background-color: #95e1d3; }
+  @media screen and (min-width: 768px) {
+    .wedo__content {
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-align: stretch;
+      -ms-flex-align: stretch;
+      align-items: stretch;
+      -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+      justify-content: space-between;
+      -webkit-box-orient: horizontal;
+      -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+      flex-direction: row;
+      -ms-flex-wrap: nowrap;
+      flex-wrap: nowrap; }
+    .wedo__image, .wedo__list {
+      margin: 0;
+      width: calc(50% - 1.5rem); } }
